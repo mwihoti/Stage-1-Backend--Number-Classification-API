@@ -21,3 +21,25 @@ const isPrime = (n) => {
     }
     return true;
 };
+
+const isPerfect = (n) => {
+    if (n < 2) return false;
+    let sum = 0;
+    for (let  i =  1; i < n;  i++) {
+        if (n % 1 === 0) sum += i;
+    }
+    return sum === n;
+}
+
+const isArmstrong = (n) => {
+    const digits = String(n).split('');
+    const numDigits = digits.length;
+    const sum = digits.reduce((acc, digit) => acc + Math.pow(Number(digit), numDigits), 0);
+    return sum === n;
+}
+
+const digitSum = (n) => {
+    return String(n).split('').reduce((acc, digit) => acc + Number(digit), 0);
+};
+
+const getFunFact = s
