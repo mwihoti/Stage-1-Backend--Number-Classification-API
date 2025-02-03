@@ -72,7 +72,7 @@ app.get('/api/classify-number', async (req, res) => {
     number: num,
     is_prime: isPrime(num),
     is_perfect: isPerfect(num),
-    properties: properties,
+    properties: properties.join(", "),
     digit_sum: digitSum(num),
     fun_fact: funFact,
   };
